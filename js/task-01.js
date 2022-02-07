@@ -18,6 +18,6 @@ const listItemsEl = document.querySelectorAll('.item');
 console.log(`Number of categories: ${listItemsEl.length}`);
 
 const allCategoriesArray = listItemsEl.forEach(el => {
-    console.log(`Category: ${el.querySelectorAll("h2")[0].textContent}`);
+    console.log(`Category: ${el.querySelector("h2").textContent}`);
     console.log(`Elements: ${el.querySelectorAll("li").length}`);
 });
