@@ -26,8 +26,6 @@ const makeGalleryCard = ({ url, alt } = {}) => {
   return `<li class="js-item"><img class="js-image" src="${url}" alt="${alt}"></li>`;
 };
 
-const galleryLiElements = images.map(pic => {
-  return makeGalleryCard(pic);
-}).join('');
+const galleryLiElements = images.map(makeGalleryCard).join('');
 
 galleryEL.insertAdjacentHTML('beforeend', galleryLiElements);
